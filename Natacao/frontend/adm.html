@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="cadastro.html">cadastro</a>
+        <a href="alunos.html">alunos</a>
+        <a href="adm.html">admin</a>
+        </nav>
+
+    </header>
+  <div class="container"> 
+<div id="login" class="card">
+<h1>Acesso restrito</h1>
+<p>Digite sua senha admin</p>
+<form onsubmit="autenticarAdmin(event)">
+ <input type="password"  id="senha" placeholder="Digite sua senha..." required>
+<button type="submit">acessar</button>
+</form>
+</div>
+  <div id="conteudo" style="display:nome">
+  <div class="card" style="display: flex;"
+   justify-content: space-between;
+   aling-items: center; flex-wrap: wrap;>
+   <h1>painel o admin</h1>
+   <p>veja as estatisticas de cadastro</p>
+   <button onclick="logoutAdmin()">sair</button>
+  </div>
+   <div class="estatistica" id="estatistica">
+
+   </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
