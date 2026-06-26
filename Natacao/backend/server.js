@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
  
 app.post("/alunos", (req,res) => {
     const {
-        nome, idade, nivel, horario, telefone
+        nome, idade, nivel, horario
     } = req.body
  
     if (!nome || !idade || !nivel || !horario ) {
@@ -92,8 +92,8 @@ app.post("/alunos", (req,res) => {
                     erro: "Já existe este nome cadastrado no banco"
                 })
             }
-            const inserirSQL = 'insert into alunos1 (nome, idade, nivel, horario, telefone) values(?, ?, ?, ?, ?)'
-            db.query (inserirSQL, [nome, idade, nivel, horario, telefone], (erro,resultado) => {
+            const inserirSQL = 'insert into alunos1 (nome, idade, nivel, horario) values(?, ?, ?, ?, ?)'
+            db.query (inserirSQL, [nome, idade, nivel, horario], (erro,resultado) => {
                 if (erro) {
                     return res.status(500).json(erro);
                 }
