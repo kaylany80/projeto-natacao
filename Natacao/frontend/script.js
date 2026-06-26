@@ -8,11 +8,11 @@ async function cadastrarAluno(event) {
  
     const nome = document.getElementById("nome").value;
     const idade = Number(document.getElementById("idade").value);
-    const telefone = document.getElementById("telefone");
+    //const telefone = document.getElementById("telefone");
     const nivel = document.getElementById("nivel").value;
     const horario = document.getElementById("horario").value;
  
-    const novoAluno = {nome, idade, nivel, horario, telefone};
+    const novoAluno = {nome, idade, nivel, horario};
  
     try {
         const resposta = await fetch(`${API}/alunos`, {
