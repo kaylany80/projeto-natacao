@@ -57,7 +57,7 @@ app.post("/alunos", (req,res) => {
         nome, idade, nivel, horario, telefone
     } = req.body
  
-    if (!nome || !idade || !nivel || !horario || !telefone) {
+    if (!nome || !idade || !nivel || !horario ) {
         return res.status(400).json({
             erro: "Preencha todos os campos."
         })
